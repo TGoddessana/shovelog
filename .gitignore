@@ -22,6 +22,7 @@ dist
 env
 venv
 .python-version
+*.db
 
 # macOS
 .DS_Store
