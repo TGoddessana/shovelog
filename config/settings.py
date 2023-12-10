@@ -1,9 +1,13 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    DB_NAME: str = "app.db"
-    DB_URL: str = f"sqlite+aiosqlite:///{DB_NAME}"
+    TITLE: str = "Shovelog Backend API"
+    DESCRIPTION: str = "Backend API for Shovelog."
+
+    DB_URL: str
+
+    model_config = SettingsConfigDict(env_file=".env")
 
 
 settings = Settings()
