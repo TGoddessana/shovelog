@@ -26,3 +26,6 @@ venv
 
 # macOS
 .DS_Store
+
+# env
+.env
