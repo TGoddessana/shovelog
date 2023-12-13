@@ -15,7 +15,7 @@ engine = create_async_engine(
     settings.DB_URL, echo=True, connect_args={"check_same_thread": False}
 )
 
-async_session_factory = async_sessionmaker(engine=engine, class_=AsyncSession)
+async_session_factory = async_sessionmaker(engine, class_=AsyncSession)
 
 AsyncSession = async_scoped_session(async_session_factory, scopefunc=current_task)
 
