@@ -923,21 +923,6 @@ pymysql = ["pymysql"]
 sqlcipher = ["sqlcipher3-binary"]
 
 [[package]]
-name = "sqlmodel"
-version = "0.0.14"
-description = "SQLModel, SQL databases in Python, designed for simplicity, compatibility, and robustness."
-optional = false
-python-versions = ">=3.7,<4.0"
-files = [
-    {file = "sqlmodel-0.0.14-py3-none-any.whl", hash = "sha256:accea3ff5d878e41ac439b11e78613ed61ce300cfcb860e87a2d73d4884cbee4"},
-    {file = "sqlmodel-0.0.14.tar.gz", hash = "sha256:0bff8fc94af86b44925aa813f56cf6aabdd7f156b73259f2f60692c6a64ac90e"},
-]
-
-[package.dependencies]
-pydantic = ">=1.10.13,<3.0.0"
-SQLAlchemy = ">=2.0.0,<2.1.0"
-
-[[package]]
 name = "starlette"
 version = "0.27.0"
 description = "The little ASGI library that shines."
@@ -1275,4 +1260,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "f4e7371b88e0bdd83f38e46f0e6bf36c816b8b5017a2d51bf4e91b06ae849429"
+content-hash = "c16521b7f06031ff771f334ec3048bd1860a249bde52ecaf15026807e2fced43"
