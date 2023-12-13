@@ -1,10 +1,7 @@
-from asyncio import current_task
-
 from sqlalchemy import MetaData
 from sqlalchemy.ext.asyncio import (
     create_async_engine,
     AsyncSession,
-    async_scoped_session,
     async_sessionmaker,
 )
 from sqlalchemy.orm import declarative_base
@@ -15,9 +12,7 @@ engine = create_async_engine(
     settings.DB_URL, echo=True, connect_args={"check_same_thread": False}
 )
 
-async_session_factory = async_sessionmaker(engine, class_=AsyncSession)
-
-AsyncSession = async_scoped_session(async_session_factory, scopefunc=current_task)
+AsyncSessionLocal = async_sessionmaker(engine, class_=AsyncSession)
 
 naming_convention = {
     "ix": "%(column_0_label)s_idx",
