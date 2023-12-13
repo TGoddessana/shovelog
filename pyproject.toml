@@ -17,6 +17,10 @@ sqlalchemy = "^2.0.23"
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.7.1"
 
+
+[tool.poetry.group.development.dependencies]
+ipython = "^8.18.1"
+
 [tool.mypy]
 strict = true
 
