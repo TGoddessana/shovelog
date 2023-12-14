@@ -23,6 +23,7 @@ ipython = "^8.18.1"
 
 [tool.mypy]
 strict = true
+plugins = ["pydantic.mypy", "sqlalchemy.ext.mypy.plugin"]
 
 [tool.ruff]
 select = [
