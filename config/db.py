@@ -12,7 +12,7 @@ engine = create_async_engine(
     settings.DB_URL, echo=True, connect_args={"check_same_thread": False}
 )
 
-AsyncSessionLocal = async_sessionmaker(engine, class_=AsyncSession)
+AsyncSessionLocal = async_sessionmaker(engine, autocommit=False, class_=AsyncSession)
 
 naming_convention = {
     "ix": "%(column_0_label)s_idx",
