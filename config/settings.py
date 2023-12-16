@@ -6,6 +6,7 @@ class Settings(BaseSettings):
     DESCRIPTION: str = "Backend API for Shovelog."
 
     DB_URL: str
+    ECHO_SQL: bool
 
     model_config = SettingsConfigDict(env_file=".env")
 
