@@ -1,3 +1,5 @@
+from typing import AsyncGenerator
+
 from sqlalchemy import MetaData
 from sqlalchemy.ext.asyncio import (
     create_async_engine,
@@ -23,3 +25,11 @@ naming_convention = {
 }
 
 Model = declarative_base(metadata=MetaData(naming_convention=naming_convention))
+
+
+async def get_session() -> AsyncGenerator[AsyncSession, None]:
+    session = AsyncSessionLocal()
+    try:
+        yield session
+    finally:
+        await session.close()
