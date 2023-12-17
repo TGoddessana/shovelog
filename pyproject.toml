@@ -21,6 +21,10 @@ mypy = "^1.7.1"
 [tool.poetry.group.development.dependencies]
 ipython = "^8.18.1"
 
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.3"
+
 [tool.mypy]
 strict = true
 plugins = ["pydantic.mypy", "sqlalchemy.ext.mypy.plugin"]
